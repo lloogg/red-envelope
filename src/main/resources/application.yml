@@ -1,0 +1,23 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/red?useSSL=false&serverTimeZone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+  redis:
+    host: localhost
+  freemarker:
+    suffix: .ftl
+server:
+  port: 80
+  tomcat:
+#    最大线程数
+    max-connections: 1000
+#    最大排队数
+    accept-count: 500
